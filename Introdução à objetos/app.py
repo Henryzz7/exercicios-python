@@ -19,18 +19,21 @@ print(id(conta3))
 # conta1.numero = 1
 print()
 #
-print(conta1.titular)
+print(conta1._titular)
 conta1.ver_saldo()
 # print(conta1.saldo)
 # print(conta1.limite)
 #
+conta1.set_titular("Limeira Júnior")
+print(conta1.get_titular())
+
 print()
 # conta2.titular = 'Kauã'
 # conta2.saldo = 5678
 # conta2.numero = 2
 # conta2.limite = 1000
 #
-print(conta2.titular)
+print(Conta.conta2._titular)
 conta2.ver_saldo()
 # print(conta2.saldo)
 # print(conta2.limite)
