@@ -11,7 +11,7 @@ conta3 = conta1
 
 print(id(conta3))
 
-
+print(conta1.limite)
 #Definir características em tempo de execução não é correto
 
 # conta1.titular = 'Limeira'
@@ -19,6 +19,10 @@ print(id(conta3))
 # conta1.numero = 1
 print()
 #
+
+conta1.limite=90
+print(conta1.limite)
+
 print(conta1._titular)
 conta1.ver_saldo()
 # print(conta1.saldo)
@@ -33,7 +37,6 @@ print()
 # conta2.numero = 2
 # conta2.limite = 1000
 #
-print(Conta.conta2._titular)
 conta2.ver_saldo()
 # print(conta2.saldo)
 # print(conta2.limite)
@@ -64,4 +67,5 @@ conta2.ver_saldo()
 # print(conta1.__dict__)
 # print(dir(Conta))
 
-print(conta2)
+# print(conta2)
+conta2.sacar(10000)

@@ -1,3 +1,5 @@
+class SaldoInsuficienteError(Exception):
+    pass
 class Conta:
     #Método de inicialização dos objetos do tipo Conta
     #Características de identificação da conta
@@ -14,14 +16,29 @@ class Conta:
     def set_titular(self, nome):
         self._titular = nome
 
+    #Método de controle de acesso com anotações (forma pythônica)
+    @property
+    def limite(self):
+        return self._limite
     #Características comportamentais (o que podemos executar)
 
+    @limite.setter
+    def limite(self, valor):
+        self._limite = valor
+
     def sacar(self, valor):
-        if valor > self._saldo + self._limite:
-            return False
-        else:
-            self._saldo -= valor
-            return True
+        try:
+            if valor > self._saldo + self._limite:
+                raise SaldoInsuficienteError('Operação não realizada. Valor é maior que saldo + limite. ')
+                # return False
+            else:
+                self._saldo -= valor
+                return True
+        except SaldoInsuficienteError as sie:
+            print(sie)
+
+
+
 
 
     def depositar(self, valor):
