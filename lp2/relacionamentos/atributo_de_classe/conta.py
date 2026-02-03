@@ -6,6 +6,8 @@ from cliente_conta import ClienteConta
 class SaldoInsuficienteError(Exception):
     pass
 class Conta:
+    _total_contas = 0
+    __slots__ = ['_numero', '_saldo', '_limite', '_historico','_clientes', '_ativa', '_emprestimos']
     #Método de inicialização dos objetos do tipo Conta
     #Características de identificação da conta
     def __init__(self, numero, saldo, limite):
@@ -17,6 +19,7 @@ class Conta:
         self._clientes = []
         self._ativa = True
         self._emprestimos = []
+        Conta._total_contas +=1
         
 
     #Métodos de controle de acesso
@@ -94,6 +97,10 @@ class Conta:
         for i in self._emprestimos:
             print(i)
 
+    # Método de classe para acessar um atributo de classe
+    @classmethod
+    def get_total_contas(cls):
+        return cls._total_contas
 
         
     def get_listar_clientes(self):

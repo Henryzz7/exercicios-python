@@ -20,20 +20,41 @@ ag_centro.adicionar_conta(conta_1)
 ag_centro.adicionar_conta(conta_2)
 ag_centro.adicionar_conta(conta_3)
 
-ag_centro.listar_contas()
+#Pelo conceito de encapsulamento
+#temos que criar um método para acessar
+#
+
+print(conta_1._total_contas)
+
+print(Conta.get_total_contas())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##ag_centro.listar_contas()
 ##ag_centro.fechar_agencia()
 
+##
+##ag_centro.fechar_conta(conta_2)
+##ag_centro.desativar_conta(conta_3)
+##samuel.get_listar_contas()
+##ag_centro.listar_contas()
 
-ag_centro.fechar_conta(conta_2)
-ag_centro.desativar_conta(conta_3)
-samuel.get_listar_contas()
-ag_centro.listar_contas()
-
-empA = Emprestimo(conta_1, 1000, 4)
-empB = Emprestimo(conta_1, 2000, 5)
+##empA = Emprestimo(conta_1, 1000, 4)
+##empB = Emprestimo(conta_1, 2000, 5)
 ##emp.pagar_parcela()
-
-conta_1.listar_emprestimos()
+##
+##conta_1.listar_emprestimos()
 ##conta_1.transferir(conta_2, 1000)
 ##conta_1._historico.ver_extrato()
 ##conta_2._historico.ver_extrato()
