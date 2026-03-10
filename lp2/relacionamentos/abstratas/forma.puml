@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Forma{
+    -tipo_forma: String
+    +area(): float
+    +perimetro(): float
+}
+
+class Circulo{
+    +{abstract}area(): float
+    +{abstract}perimetro(): float
+}
+
+class Triangulo{
+    +{abstract}area(): float
+    +{abstract}perimetro(): float
+}
+
+class Quadrilatero{
+    +{abstract}area(): float
+    +{abstract}perimetro(): float
+}
+
+Forma <|-- Circulo
+Forma <|-- Triangulo
+Forma <|-- Quadrilatero
+
+@enduml
